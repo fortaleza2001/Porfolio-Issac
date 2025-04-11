@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Producto Modular X</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -12,15 +16,60 @@
     <a href="index.html" class="text-blue-500 hover:underline">&larr; Volver al portafolio</a>
   </header>
 
-  <main class="max-w-4xl mx-auto py-12 px-6">
-    <h1 class="text-4xl font-bold mb-6">Producto Modular X</h1>
-    <img src="https://via.placeholder.com/800x400" alt="Producto Modular X" class="rounded shadow mb-6">
-    <p class="text-lg mb-4">
-      Este proyecto consistió en el desarrollo de un producto modular que puede ensamblarse y desmontarse fácilmente, ideal para situaciones que requieren transporte y reutilización frecuente. 
-    </p>
-    <p class="text-gray-700">
-      Las decisiones de diseño se basaron en criterios de sostenibilidad, facilidad de uso y estética industrial. Se utilizaron herramientas como SolidWorks y técnicas de impresión 3D para prototipos funcionales.
-    </p>
+  <main class="max-w-4xl mx-auto py-12 px-6 space-y-12">
+
+    <!-- Título -->
+    <h1 class="text-4xl font-bold text-center">Producto Modular X</h1>
+
+    <!-- Texto introductorio -->
+    <section class="space-y-4">
+      <p class="text-lg">
+        Este proyecto se centra en la creación de un producto modular pensado para el ensamblaje rápido y la portabilidad.
+        La solución está diseñada para adaptarse a contextos industriales, educativos y de emergencia.
+      </p>
+      <p class="text-gray-700">
+        Desde la etapa conceptual hasta la producción, se aplicaron principios de ingeniería de producto, prototipado 3D
+        y diseño funcional. La modularidad permite múltiples configuraciones con un solo conjunto de componentes.
+      </p>
+    </section>
+
+    <!-- Video de demostración -->
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe class="w-full rounded shadow-lg"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Video demostrativo del producto"
+              frameborder="0"
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Texto posterior al video -->
+    <section class="space-y-4">
+      <p class="text-lg">
+        Durante el proceso, se realizaron diversas iteraciones del prototipo para optimizar tanto la funcionalidad como la experiencia de usuario.
+        Se evaluó la resistencia de los materiales, la facilidad de montaje y el impacto ambiental.
+      </p>
+      <p class="text-gray-700">
+        El resultado final es un sistema eficiente, visualmente atractivo y altamente versátil que puede escalarse
+        según las necesidades específicas del usuario.
+      </p>
+    </section>
+
+    <!-- Animación del ingeniero al final -->
+    <div class="flex flex-col items-center pt-8">
+      <p class="text-xl font-semibold mb-4">Gracias por visitar este proyecto 👷‍♂️</p>
+      <dotlottie-player
+      src="https://lottie.host/7632b361-c6e5-46e8-8cff-22b398b97fbc/0epu6kC32J.lottie"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      loop
+      autoplay
+    ></dotlottie-player>
+    
+    
+    </div>
+
   </main>
 
   <footer class="text-center text-sm text-gray-500 py-6">
