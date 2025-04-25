@@ -8,19 +8,49 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Isaac Pinacho</h1>
-      <nav class="space-x-6">
-        <a href="#inicio" class="hover:text-blue-500">Inicio</a>
-        <a href="#sobre-mi" class="hover:text-blue-500">Sobre mí</a>
-        <a href="#proyectos" class="hover:text-blue-500">Proyectos</a>
-        <a href="#habilidades" class="hover:text-blue-500">Habilidades</a>
-        <a href="#contacto" class="hover:text-blue-500">Contacto</a>
-      </nav>
-    </div>
-  </header>
+ <!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo o nombre -->
+    <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Isaac Pinacho</h1>
+
+    <!-- Menú Desktop -->
+    <nav class="hidden md:flex space-x-6 text-gray-800 font-medium">
+      <a href="#inicio" class="hover:text-blue-600 transition-colors duration-300">Inicio</a>
+      <a href="#sobre-mi" class="hover:text-blue-600 transition-colors duration-300">Sobre mí</a>
+      <a href="#proyectos" class="hover:text-blue-600 transition-colors duration-300">Proyectos</a>
+      <a href="#habilidades" class="hover:text-blue-600 transition-colors duration-300">Habilidades</a>
+      <a href="#contacto" class="hover:text-blue-600 transition-colors duration-300">Contacto</a>
+    </nav>
+
+    <!-- Botón menú móvil -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white text-gray-800 font-medium">
+    <a href="#inicio" class="block py-2 hover:text-blue-600 transition-colors duration-300">Inicio</a>
+    <a href="#sobre-mi" class="block py-2 hover:text-blue-600 transition-colors duration-300">Sobre mí</a>
+    <a href="#proyectos" class="block py-2 hover:text-blue-600 transition-colors duration-300">Proyectos</a>
+    <a href="#habilidades" class="block py-2 hover:text-blue-600 transition-colors duration-300">Habilidades</a>
+    <a href="#contacto" class="block py-2 hover:text-blue-600 transition-colors duration-300">Contacto</a>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+  
 
   <!-- Hero / Inicio -->
   <section id="inicio" class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-500 text-white">
